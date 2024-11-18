@@ -9,7 +9,7 @@ docker images
 - Download mysql docker image
 
 ```shell
-docker pull mysql:latest
+docker pull mysql/mysql-server
 ```
 
 - Start a mysql server
@@ -24,8 +24,7 @@ docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -d mys
 docker exec -it test-mysql bash
 ```
 
-- Create new user mysql (connecting with root is not allowed on docker)
-
+- Create new user mysql (connecting with root is not allowed on docker), please note that doing below is risky on production grade software.
 ```mysql
 CREATE USER 'akash'@'%' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'akash'@'%';

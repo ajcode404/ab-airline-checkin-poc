@@ -15,7 +15,7 @@ docker pull mysql:latest
 - Start a mysql server
 
 ```shell
-docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=strong_password -p 3306:3306 -d mysql/mysql-server 
+docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -d mysql/mysql-server 
 ```
 
 - Execute container 

@@ -1,5 +1,10 @@
 package com.github.ajcode404
 
 fun main() {
-    println("Hello World!")
+
+    val pool = ConnectionPool(200)
+
+    executeQuery(pool) {
+        it.execute("SELECT  ")
+    }
 }
